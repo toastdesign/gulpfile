@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	plumber = require('gulp-plumber'),
 	imagemin = require('gulp-imagemin'),
-	prefixr = require('gulp-autoprefixer');
+	prefixr = require('gulp-autoprefixer'),
+	insert = require('gulp-insert');
 
 
 // Compress images 
@@ -25,7 +26,9 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
 	gulp.src('sass/style.scss')
 		.pipe(plumber())
-		.pipe(sass())
+		.pipe(sass({
+			includePaths: ['./node_modules/breakpoint-sass/stylesheets','./node_modules/susy/sass']
+		}))
 		.pipe(prefixr('last 4 versions'))
 		.pipe(gulp.dest(''));
 });
