@@ -9,11 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "breakpoint": "^0.1.6",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.1"
+    "gulp-uglify": "^1.4.1",
+    "susy": "^2.2.6"
   }
 }
